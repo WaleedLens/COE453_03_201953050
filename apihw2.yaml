@@ -1,0 +1,47 @@
+swagger: '2.0'
+info:
+  title: Calculator
+  description: API Gateway for a simple calculator service hosted on Cloud Run
+  version: '1.0.0'
+host: 'myapi-3uiu2fmz981te.apigateway.apachehw2.cloud.goog'  
+schemes:
+  - https
+produces:
+  - application/json
+paths:
+  /add:
+    get:
+      summary: Addition
+      operationId: add
+      responses:
+        '200':
+          description: Successful operation
+      x-google-backend:
+        address: https://clorhw6-jwsz22e7ua-uc.a.run.app/add
+  /subtract:
+    get:
+      summary: Subtraction
+      operationId: subtract
+      responses:
+        '200':
+          description: Successful operation
+      x-google-backend:
+        address: https://clorhw6-jwsz22e7ua-uc.a.run.app/subtract
+  /multiply:
+    get:
+      summary: Multiplication
+      operationId: multiply
+      responses:
+        '200':
+          description: Successful operation
+      x-google-backend:
+        address: https://clorhw6-jwsz22e7ua-uc.a.run.app/multiply
+  /divide:
+    get:
+      summary: Division
+      operationId: divide
+      responses:
+        '200':
+          description: Successful operation
+      x-google-backend:
+        address: https://clorhw6-jwsz22e7ua-uc.a.run.app/divide
